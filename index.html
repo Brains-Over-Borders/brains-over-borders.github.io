@@ -181,6 +181,8 @@ section.band { background: var(--band); }
 .avatar { width: 60px; background: var(--honey); color: #1d1a14; display: grid; place-items: center; font-family: var(--display); font-weight: 800; font-size: 19px; }
 .member h3 { font-size: 19px; font-weight: 700; }
 .member .role { font-size: 14.5px; color: var(--muted); margin-top: 4px; }
+.cred { display: inline-block; margin-top: 10px; font-family: var(--mono); font-size: 11px; letter-spacing: .08em; text-transform: uppercase; color: var(--propolis); background: var(--honey-soft); padding: 3px 9px; border-radius: 6px; }
+.member.lead .cred { background: rgba(224,155,18,.18); color: var(--honey); }
 .yrs { display: flex; align-items: baseline; gap: 8px; border-top: 1px solid var(--line); padding-top: 16px; }
 .yrs b { font-family: var(--display); font-size: 36px; font-weight: 800; line-height: 1; color: var(--propolis); font-variant-numeric: tabular-nums; }
 .yrs span { font-size: 13px; color: var(--muted); }
@@ -527,22 +529,22 @@ footer .wrap { padding-block: 24px 32px; font-size: 14px; display: flex; flex-wr
       <div class="sec-head">
         <span class="eyebrow">Our team</span>
         <h2>The people who build your system</h2>
-        <p>A small senior team led by a solution architect with more than three decades in the field. You talk directly to the engineers writing your code.</p>
+        <p>A small senior team led by Dr. Nader Skouti, a solution architect with more than three decades in the field, with two engineers holding master's degrees. You talk directly to the engineers writing your code.</p>
       </div>
       <div class="team">
         <div class="member lead">
           <div class="avatar hex" aria-hidden="true">NS</div>
-          <div><h3>Nader Skouti</h3><p class="role">Solution Architect</p></div>
+          <div><h3>Dr. Nader Skouti</h3><p class="role">Solution Architect</p><span class="cred">Doctorate</span></div>
           <div class="yrs"><b>30+</b><span>years of experience</span></div>
         </div>
         <div class="member">
           <div class="avatar hex" aria-hidden="true">HA</div>
-          <div><h3>Hasan Mhd Amin</h3><p class="role">Senior Software Engineer</p></div>
+          <div><h3>Hasan Mhd Amin</h3><p class="role">Senior Software Engineer</p><span class="cred">Master's degree</span></div>
           <div class="yrs"><b>10+</b><span>years of experience</span></div>
         </div>
         <div class="member">
           <div class="avatar hex" aria-hidden="true">MS</div>
-          <div><h3>Mohammed Skouti</h3><p class="role">Senior Software Engineer</p></div>
+          <div><h3>Mohammed Skouti</h3><p class="role">Senior Software Engineer</p><span class="cred">Master's degree</span></div>
           <div class="yrs"><b>7+</b><span>years of experience</span></div>
         </div>
         <div class="member">
