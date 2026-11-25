@@ -1,0 +1,614 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="BOB (Bee On Budget) is a software studio building web platforms, mobile apps and desktop software for growing businesses, in English, Arabic, German, French and Romanian.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="BOB · Bee On Budget">
+<meta property="og:description" content="BOB (Bee On Budget) is a software studio building web platforms, mobile apps and desktop software for growing businesses, in English, Arabic, German, French and Romanian.">
+<meta property="og:url" content="https://bee-on-budget.github.io/">
+<meta property="og:image" content="https://bee-on-budget.github.io/brand/bob-og.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/svg+xml" href="brand/bob-logo-mark.svg">
+<link rel="apple-touch-icon" href="brand/bob-logo-mark-512.png">
+<link rel="canonical" href="https://bee-on-budget.github.io/">
+<style>
+:root { padding-top: env(safe-area-inset-top, 0px); padding-bottom: env(safe-area-inset-bottom, 0px); }
+body { margin: 0; font-size: 14px; }
+img { max-width: 100%; }
+[hidden] { display: none !important; }
+</style>
+</head>
+<body>
+<title>BOB · Bee On Budget</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Figtree:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=IBM+Plex+Sans+Arabic:wght@500;600&display=swap">
+<style>
+/* Layout: sticky nav → dark honeycomb hero (doubles as PDF cover) → client strip → alternating light/surface bands → dark contact bookend. Hexagon is the one recurring motif. */
+:root {
+  --bg: #fbfaf6;
+  --band: #f4f0e6;
+  --surface: #ffffff;
+  --ink: #1d1a14;
+  --muted: #6b6455;
+  --line: #e7e1d2;
+  --honey: #e09b12;
+  --honey-soft: #fcefd2;
+  --propolis: #6a440f;
+  --chip: #f3eee2;
+  --night: #1a1712;
+  --night-line: #3a342a;
+  --night-ink: #f2ede2;
+  --night-muted: #b3a994;
+  --display: "Bricolage Grotesque", "Segoe UI", system-ui, sans-serif;
+  --body: "Figtree", "Segoe UI", system-ui, sans-serif;
+  --mono: "JetBrains Mono", ui-monospace, Consolas, monospace;
+  --arabic: "IBM Plex Sans Arabic", "Segoe UI", Tahoma, sans-serif;
+  --comb: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='55.4' height='96' viewBox='0 0 55.4 96'%3E%3Cpath d='M0 16 L27.7 0 L55.4 16 L55.4 48 L27.7 64 L0 48 Z M27.7 64 L27.7 96' fill='none' stroke='%23e09b12' stroke-opacity='.22' stroke-width='1.2'/%3E%3C/svg%3E");
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #15130f; --band: #1b1813; --surface: #211d17; --ink: #f2ede2; --muted: #a89f8c; --line: #332e25;
+    --honey: #f2b233; --honey-soft: #3a2c10; --propolis: #f6d38b; --chip: #2a251d; --night: #0f0d0a; --night-line: #2e291f; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #15130f; --band: #1b1813; --surface: #211d17; --ink: #f2ede2; --muted: #a89f8c; --line: #332e25;
+  --honey: #f2b233; --honey-soft: #3a2c10; --propolis: #f6d38b; --chip: #2a251d; --night: #0f0d0a; --night-line: #2e291f; color-scheme: dark;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { background: var(--bg); color: var(--ink); font-family: var(--body); font-size: 16px; line-height: 1.6; }
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 30; background: var(--bg); }
+.wrap { max-width: 1160px; margin: 0 auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+h1, h2, h3, h4 { font-family: var(--display); line-height: 1.1; text-wrap: balance; margin: 0; }
+p { margin: 0; }
+a { color: var(--propolis); }
+a:focus-visible, button:focus-visible { outline: 2px solid var(--honey); outline-offset: 3px; border-radius: 6px; }
+.eyebrow { font-family: var(--mono); font-size: 12px; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); }
+.hex { aspect-ratio: 1 / 1.1547; clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%); }
+[lang="ar"] { font-family: var(--arabic); }
+
+/* Nav */
+.nav { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 20; background: color-mix(in srgb, var(--bg) 88%, transparent); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border-bottom: 1px solid var(--line); }
+.nav .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-block: 12px; }
+.brand { display: flex; align-items: center; gap: 10px; text-decoration: none; color: inherit; }
+.logo-mark { width: 36px; height: auto; display: block; flex-shrink: 0; }
+.brand b { font-family: var(--display); font-weight: 800; font-size: 18px; letter-spacing: .02em; }
+.brand small { font-size: 12px; color: var(--muted); display: block; line-height: 1.1; }
+.nav-links { display: flex; align-items: center; gap: 26px; }
+.nav-links a { text-decoration: none; color: var(--ink); font-weight: 500; font-size: 15px; }
+.nav-links a:hover { color: var(--honey); }
+.nav-links a.cta { background: var(--ink); color: var(--bg); padding: 9px 16px; border-radius: 10px; font-weight: 600; }
+.nav-links a.cta:hover { background: var(--honey); color: #1d1a14; }
+
+/* Hero / cover */
+.cover { position: relative; overflow: hidden; background: var(--night); color: var(--night-ink); }
+.cover::before { content: ""; position: absolute; inset: 0; background-image: var(--comb); background-size: 55.4px 96px; -webkit-mask-image: linear-gradient(200deg, #000 0%, rgba(0,0,0,.45) 40%, transparent 75%); mask-image: linear-gradient(200deg, #000 0%, rgba(0,0,0,.45) 40%, transparent 75%); pointer-events: none; }
+.cover::after { content: ""; position: absolute; width: 520px; height: 520px; right: -140px; top: -160px; background: radial-gradient(circle, rgba(224,155,18,.28), transparent 65%); pointer-events: none; }
+.cover .wrap { position: relative; z-index: 1; display: grid; gap: 44px; padding-block: 88px 56px; }
+.cover-top { display: none; }
+.cover-mid { display: grid; gap: 20px; max-width: 820px; }
+.cover-mid .eyebrow { color: var(--honey); }
+.cover h1 { font-size: clamp(60px, 11vw, 128px); font-weight: 800; letter-spacing: -.03em; line-height: .92; }
+.cover h1 em { font-style: normal; color: var(--honey); display: block; }
+.cover .lede { font-size: clamp(17px, 2vw, 20px); line-height: 1.6; color: var(--night-muted); max-width: 34em; }
+.cover .lede strong { color: var(--night-ink); font-weight: 600; }
+.hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 8px; }
+.btn { display: inline-flex; align-items: center; gap: 8px; padding: 13px 20px; border-radius: 12px; font-weight: 600; text-decoration: none; font-size: 15px; }
+.btn.primary { background: var(--honey); color: #1d1a14; }
+.btn.primary:hover { background: #f2b233; }
+.btn.ghost { color: var(--night-ink); border: 1px solid var(--night-line); }
+.btn.ghost:hover { border-color: var(--honey); color: var(--honey); }
+.cover-stats { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); border-top: 1px solid var(--night-line); }
+.cover-stats div { padding: 20px 18px 4px; border-left: 1px solid var(--night-line); display: grid; gap: 6px; align-content: start; }
+.cover-stats div:first-child { border-left: 0; padding-left: 0; }
+.cover-stats b { font-family: var(--display); font-size: clamp(32px, 4vw, 44px); font-weight: 800; color: var(--honey); line-height: 1; font-variant-numeric: tabular-nums; }
+.cover-stats span { font-size: 13px; color: var(--night-muted); }
+.cover-bottom { display: none; }
+
+/* Clients strip */
+.clients { border-bottom: 1px solid var(--line); }
+.clients .wrap { display: flex; flex-wrap: wrap; align-items: center; gap: 14px 40px; padding-block: 26px; }
+.clients .eyebrow { flex-basis: 100%; }
+.clients span.name { font-family: var(--display); font-weight: 700; font-size: 20px; color: var(--muted); display: inline-flex; align-items: center; gap: 10px; }
+.clients span.name::before { content: ""; width: 10px; aspect-ratio: 1 / 1.1547; background: var(--honey); clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%); }
+
+/* Sections */
+section { padding-block: 88px; }
+section.band { background: var(--band); }
+.sec-head { display: grid; gap: 12px; margin-bottom: 44px; max-width: 700px; }
+.sec-head h2 { font-size: clamp(30px, 4.4vw, 46px); font-weight: 800; letter-spacing: -.01em; }
+.sec-head p { color: var(--muted); font-size: 17px; }
+
+/* Services */
+.services { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+.svc { background: var(--surface); border: 1px solid var(--line); border-radius: 16px; padding: 28px; display: grid; gap: 12px; align-content: start; transition: transform .2s ease, border-color .2s ease; }
+.svc:hover { transform: translateY(-3px); border-color: var(--honey); }
+.svc .ic { width: 40px; background: var(--honey-soft); display: grid; place-items: center; font-family: var(--mono); font-size: 11px; font-weight: 500; color: var(--propolis); }
+.svc h3 { font-size: 20px; font-weight: 700; }
+.svc p { color: var(--muted); font-size: 15px; }
+
+/* Case studies */
+.cases { display: grid; gap: 40px; }
+.case { background: var(--surface); border: 1px solid var(--line); border-radius: 20px; padding: 32px; display: grid; grid-template-columns: 1fr 1.35fr; gap: 32px 44px; }
+.shot { grid-column: 1 / -1; margin: 0; border-radius: 12px; overflow: hidden; border: 1px solid var(--line); background: var(--chip); box-shadow: 0 24px 48px -28px rgba(40, 28, 6, .5); transition: transform .3s ease; }
+.case:hover .shot { transform: translateY(-4px); }
+.shot-bar { display: flex; align-items: center; gap: 12px; padding: 10px 14px; border-bottom: 1px solid var(--line); background: var(--chip); }
+.dots { display: flex; gap: 6px; flex-shrink: 0; }
+.dots i { width: 10px; height: 10px; border-radius: 50%; background: var(--line); }
+.dots i:first-child { background: var(--honey); }
+.shot-label { font-family: var(--mono); font-size: 12px; color: var(--muted); background: var(--surface); border-radius: 6px; padding: 3px 12px; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.shot img { display: block; width: 100%; height: auto; }
+.case-meta { display: grid; gap: 14px; align-content: start; min-width: 0; }
+.case-meta h3 { font-size: clamp(28px, 3.6vw, 38px); font-weight: 800; letter-spacing: -.01em; }
+.case-meta .client { font-size: 15px; color: var(--muted); }
+.case-meta .client[lang="ar"] { font-size: 18px; }
+.case-meta .sum { font-size: 16.5px; }
+.sector { display: inline-flex; align-items: center; gap: 8px; font-family: var(--mono); font-size: 12px; letter-spacing: .1em; text-transform: uppercase; color: var(--propolis); }
+.sector::before { content: ""; width: 10px; aspect-ratio: 1 / 1.1547; background: var(--honey); clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%); }
+.tags { display: flex; flex-wrap: wrap; gap: 6px; }
+.tag { font-family: var(--mono); font-size: 12px; background: var(--chip); color: var(--ink); padding: 4px 9px; border-radius: 6px; }
+.visit { display: inline-flex; align-items: center; gap: 6px; font-weight: 600; text-decoration: none; border-bottom: 2px solid var(--honey); width: fit-content; padding-bottom: 1px; }
+.visit:hover { color: var(--honey); }
+.parts { display: grid; gap: 16px; min-width: 0; align-content: start; }
+.part { border-left: 3px solid var(--honey); padding: 2px 0 2px 18px; display: grid; gap: 6px; }
+.part h4 { font-size: 17px; font-weight: 700; display: flex; flex-wrap: wrap; gap: 8px; align-items: baseline; }
+.part h4 .plat { font-family: var(--mono); font-size: 11px; font-weight: 400; color: var(--muted); letter-spacing: .06em; text-transform: uppercase; }
+.part p { font-size: 15px; color: var(--muted); }
+.feat { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px 20px; margin: 4px 0 0; padding: 18px 0 0; border-top: 1px dashed var(--line); list-style: none; font-size: 14.5px; }
+.feat li { position: relative; padding-left: 16px; }
+.feat li::before { content: ""; position: absolute; left: 0; top: .62em; width: 7px; height: 7px; background: var(--honey); clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%); }
+
+/* Traits */
+.traits { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; }
+.trait { display: grid; gap: 10px; align-content: start; padding: 24px; border-radius: 16px; background: var(--surface); border: 1px solid var(--line); }
+.trait .ic { width: 46px; background: var(--honey); display: grid; place-items: center; font-family: var(--mono); font-size: 12px; font-weight: 500; color: #1d1a14; }
+.trait .ic[lang="ar"] { font-family: var(--arabic); font-size: 16px; font-weight: 600; }
+.trait b { font-family: var(--display); font-size: 18px; }
+.trait p { font-size: 15px; color: var(--muted); }
+
+/* Team */
+.team { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; }
+.member { background: var(--surface); border: 1px solid var(--line); border-radius: 18px; padding: 26px; display: grid; gap: 16px; align-content: start; }
+.member.lead { background: var(--night); border-color: var(--night); color: var(--night-ink); }
+.member.lead .role, .member.lead .yrs span { color: var(--night-muted); }
+.member.lead .yrs { border-color: var(--night-line); }
+.member.lead .yrs b { color: var(--honey); }
+.avatar { width: 60px; background: var(--honey); color: #1d1a14; display: grid; place-items: center; font-family: var(--display); font-weight: 800; font-size: 19px; }
+.member h3 { font-size: 19px; font-weight: 700; }
+.member .role { font-size: 14.5px; color: var(--muted); margin-top: 4px; }
+.yrs { display: flex; align-items: baseline; gap: 8px; border-top: 1px solid var(--line); padding-top: 16px; }
+.yrs b { font-family: var(--display); font-size: 36px; font-weight: 800; line-height: 1; color: var(--propolis); font-variant-numeric: tabular-nums; }
+.yrs span { font-size: 13px; color: var(--muted); }
+
+/* Stack */
+.stack { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; }
+.stack-col { display: grid; gap: 14px; align-content: start; padding: 22px; border-radius: 16px; border: 1px solid var(--line); background: var(--surface); }
+.stack-col h3 { font-size: 13px; font-family: var(--mono); font-weight: 500; letter-spacing: .12em; text-transform: uppercase; color: var(--propolis); }
+
+/* Contact */
+.contact-sec { position: relative; overflow: hidden; background: var(--night); color: var(--night-ink); }
+.contact-sec::before { content: ""; position: absolute; inset: 0; background-image: var(--comb); background-size: 55.4px 96px; -webkit-mask-image: linear-gradient(20deg, #000 0%, transparent 60%); mask-image: linear-gradient(20deg, #000 0%, transparent 60%); pointer-events: none; }
+.contact { position: relative; display: grid; grid-template-columns: 1.3fr 1fr; gap: 40px; align-items: center; }
+.contact .eyebrow { color: var(--honey); }
+.contact h2 { font-size: clamp(32px, 5vw, 54px); font-weight: 800; margin-top: 12px; letter-spacing: -.01em; }
+.contact p { font-size: 17px; margin-top: 16px; max-width: 30em; color: var(--night-muted); }
+.links { display: grid; gap: 12px; }
+.ct { display: flex; align-items: center; justify-content: space-between; gap: 12px; background: #fbfaf6; color: #1d1a14; padding: 16px 16px 16px 22px; border-radius: 14px; }
+.ct div { display: grid; min-width: 0; }
+.ct small { font-family: var(--mono); font-size: 11px; letter-spacing: .1em; text-transform: uppercase; color: #6b6455; }
+.ct b { font-size: 18px; font-weight: 600; overflow-wrap: anywhere; user-select: all; font-variant-numeric: tabular-nums; }
+.ct button { flex-shrink: 0; font: 600 13px var(--body); background: #e09b12; color: #1d1a14; border: 0; border-radius: 9px; padding: 9px 16px; cursor: pointer; }
+.ct button:hover { background: #f2b233; }
+.pdf-link { display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 16px 22px; border-radius: 14px; border: 1px solid var(--night-line); color: var(--night-ink); text-decoration: none; font-weight: 600; }
+.pdf-link span { font-family: var(--mono); font-size: 12px; color: var(--honey); }
+.pdf-link:hover { border-color: var(--honey); }
+footer { background: var(--night); color: var(--night-muted); border-top: 1px solid var(--night-line); }
+footer .wrap { padding-block: 24px 32px; font-size: 14px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; }
+
+@media (max-width: 900px) {
+  .case, .contact { grid-template-columns: 1fr; }
+  .services { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .traits, .stack, .team { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .cover-stats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .cover-stats div:nth-child(3) { border-left: 0; padding-left: 0; }
+  .case { padding: 24px; }
+  .nav-links a:not(.cta) { display: none; }
+}
+@media (max-width: 560px) {
+  .services, .traits, .stack, .feat, .team { grid-template-columns: 1fr; }
+  section { padding-block: 64px; }
+  .case { padding: 18px; }
+  .cover .wrap { padding-block: 56px 40px; }
+  .brand small { display: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .svc, .shot { transition: none; }
+  .svc:hover, .case:hover .shot { transform: none; }
+}
+
+/* PDF */
+@page { size: A4; margin: 16mm 0 16mm; }
+@page :first { margin: 0; }
+@media print {
+  :root { --bg: #ffffff; --band: #ffffff; }
+  html, body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  body { font-size: 13px; margin: 0; }
+  body::before { display: none; }
+  .nav, .hero-actions, .ct button, .pdf-link { display: none; }
+  .wrap { padding-left: 14mm; padding-right: 14mm; max-width: none; }
+  .cover { height: 296.5mm; break-after: page; display: flex; }
+  .cover .wrap { flex: 1; width: 100%; padding: 20mm 18mm 16mm; display: flex; flex-direction: column; justify-content: space-between; gap: 0; }
+  .cover-top { display: flex; justify-content: space-between; align-items: center; }
+  .cover-top .brand b { color: var(--night-ink); }
+  .cover-top .eyebrow { color: var(--night-muted); }
+  .cover h1 { font-size: 96px; }
+  .cover .lede { font-size: 16px; }
+  .cover-stats { border-bottom: 1px solid var(--night-line); }
+  .cover-stats div { padding-bottom: 16px; }
+  .cover-bottom { display: grid; grid-template-columns: 1.3fr 1fr; gap: 24px; align-items: end; }
+  .inside { display: grid; gap: 8px; }
+  .inside .eyebrow { color: var(--night-muted); }
+  .inside ol { margin: 0; padding: 0; list-style: none; display: flex; flex-wrap: wrap; gap: 6px; }
+  .inside li { font-size: 11.5px; border: 1px solid var(--night-line); border-radius: 999px; padding: 4px 11px; color: var(--night-muted); }
+  .cover-contact { text-align: right; display: grid; gap: 4px; font-size: 13px; color: var(--night-muted); }
+  .cover-contact b { color: var(--night-ink); font-weight: 600; font-size: 15px; }
+  .clients { display: none; }
+  section { padding-block: 22px; }
+  section.band { background: #fff; }
+  .sec-head { margin-bottom: 20px; }
+  .sec-head h2 { font-size: 30px; }
+  .sec-head p { font-size: 14px; }
+  .services { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; }
+  .svc { padding: 16px; gap: 8px; }
+  .svc h3 { font-size: 15.5px; }
+  .svc p, .trait p, .part p { font-size: 12.5px; }
+  .cases { gap: 0; }
+  .case { grid-template-columns: 1fr 1.3fr; gap: 18px 24px; padding: 20px; box-shadow: none; break-inside: avoid; margin-bottom: 16px; }
+  .shot { box-shadow: none; }
+  .case-meta h3 { font-size: 24px; }
+  .case-meta .sum { font-size: 13.5px; }
+  .feat { font-size: 12px; }
+  .traits, .stack, .team { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 10px; }
+  .trait, .stack-col, .member { padding: 16px; }
+  .member h3 { font-size: 15px; }
+  .yrs b { font-size: 26px; }
+  .contact { grid-template-columns: 1.2fr 1fr; gap: 24px; }
+  .contact-sec { padding-block: 32px; }
+  .contact h2 { font-size: 30px; }
+  .ct b { font-size: 14.5px; overflow-wrap: normal; }
+  section { padding-block: 14px; }
+  .svc { padding: 14px; gap: 6px; }
+  .svc p, .trait p { font-size: 12px; line-height: 1.5; }
+  .trait { padding: 14px; gap: 8px; }
+  .trait .ic, .svc .ic { width: 34px; }
+  section:not(.work) { break-inside: avoid; }
+  .work .sec-head { break-after: avoid; }
+  .shot, .part, .member, .svc, .trait, .stack-col, .sec-head { break-inside: avoid; }
+  h2, h3, h4 { break-after: avoid; }
+  .page-break { break-before: page; }
+  footer { break-before: avoid; }
+}
+</style>
+
+<nav class="nav" aria-label="Main">
+  <div class="wrap">
+    <a class="brand" href="#top"><svg class="logo-mark" viewBox="0 0 100 115.5" aria-hidden="true"><path d="M50 3 L97 30.2 L97 85.3 L50 112.5 L3 85.3 L3 30.2 Z" fill="#E09B12" stroke="#E09B12" stroke-width="6" stroke-linejoin="round"/><path d="M32 86 V30 H54 L64 44 L54 58 H32 M54 58 H57 L68 72 L57 86 H32" fill="none" stroke="#1D1A14" stroke-width="9" stroke-linecap="square"/></svg><div><b>BOB</b><small>Bee On Budget</small></div></a>
+    <div class="nav-links">
+      <a href="#services">Services</a>
+      <a href="#work">Work</a>
+      <a href="#team">Team</a>
+      <a class="cta" href="#contact">Contact us</a>
+    </div>
+  </div>
+</nav>
+
+<header class="cover" id="top">
+  <div class="wrap">
+    <div class="cover-top">
+      <div class="brand"><svg class="logo-mark" viewBox="0 0 100 115.5" aria-hidden="true"><path d="M50 3 L97 30.2 L97 85.3 L50 112.5 L3 85.3 L3 30.2 Z" fill="#E09B12" stroke="#E09B12" stroke-width="6" stroke-linejoin="round"/><path d="M32 86 V30 H54 L64 44 L54 58 H32 M54 58 H57 L68 72 L57 86 H32" fill="none" stroke="#1D1A14" stroke-width="9" stroke-linecap="square"/></svg><b>BOB</b></div>
+      <span class="eyebrow">Company Profile · 2026</span>
+    </div>
+    <div class="cover-mid">
+      <span class="eyebrow">Software studio · Web · Mobile · Desktop</span>
+      <h1>Bee On<em>Budget</em></h1>
+      <p class="lede">We build <strong>web platforms, mobile apps and desktop software</strong> for growing businesses. We work in <strong>English, Arabic, German, French and Romanian</strong>, deliver through one senior team, and priced so a small company can afford real software.</p>
+      <div class="hero-actions">
+        <a class="btn primary" href="#contact">Start a project</a>
+        <a class="btn ghost" href="#work">See our work ↓</a>
+      </div>
+    </div>
+    <div class="cover-stats">
+      <div><b>4</b><span>client products in production</span></div>
+      <div><b>50+</b><span>years of combined experience</span></div>
+      <div><b>3</b><span>platforms: web, mobile, desktop</span></div>
+      <div><b>5</b><span>languages: EN · AR · DE · FR · RO</span></div>
+    </div>
+    <div class="cover-bottom">
+      <div class="inside">
+        <span class="eyebrow">Inside</span>
+        <ol><li>What we build</li><li>How we work</li><li>Celebrity Systems</li><li>Morph Accounting</li><li>Royal Fragrance</li><li>Al Khobara Al Arab</li><li>Our team</li><li>Technology</li></ol>
+      </div>
+      <div class="cover-contact">
+        <b>+40 791 518 316</b>
+        <span>Mohammed.skouti.98@gmail.com</span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="clients">
+  <div class="wrap">
+    <span class="eyebrow">Trusted by</span>
+    <span class="name">Celebrity Systems</span>
+    <span class="name">Morph Accounting</span>
+    <span class="name">Al Khobara Al Arab</span>
+    <span class="name">Royal Fragrance</span>
+  </div>
+</div>
+
+<main>
+  <section id="services">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">What we build</span>
+        <h2>One team, from the database to the app store</h2>
+        <p>We take a business process and turn it into the full set of tools around it: the server, the admin dashboard, the mobile app for staff and customers, and the public website.</p>
+      </div>
+      <div class="services">
+        <div class="svc"><div class="ic hex">OPS</div><h3>Operations platforms</h3><p>Ticketing, field-service, contracts and reporting systems with role-based access for admins, supervisors, workers and clients.</p></div>
+        <div class="svc"><div class="ic hex">APP</div><h3>Mobile apps</h3><p>Cross-platform Flutter apps for iOS and Android, with push notifications, file uploads, PDF viewing and offline-friendly flows.</p></div>
+        <div class="svc"><div class="ic hex">KPI</div><h3>Admin dashboards</h3><p>Analytics, charts, Excel and PDF exports, user and company management for the people running the business.</p></div>
+        <div class="svc"><div class="ic hex">API</div><h3>Backend & APIs</h3><p>Secure Spring Boot services with JWT auth, MySQL, cloud file storage, email and scheduled jobs, or Firebase when speed matters.</p></div>
+        <div class="svc"><div class="ic hex">EXE</div><h3>Desktop software</h3><p>Offline Windows applications with a local database, backups and a one-click installer for shops and workshops.</p></div>
+        <div class="svc"><div class="ic hex">WEB</div><h3>Company websites</h3><p>Fast, animated, SEO-ready marketing sites with service pages, project portfolios, pricing tables and contact forms.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">How we work</span>
+        <h2>What every BOB project has in common</h2>
+      </div>
+      <div class="traits">
+        <div class="trait"><div class="ic hex" lang="ar">ع</div><b>Multilingual by default</b><p>We work with clients in English, Arabic, German, French and Romanian, and build apps in those languages, with full right-to-left support for Arabic.</p></div>
+        <div class="trait"><div class="ic hex">1</div><b>The whole system</b><p>Backend, dashboard, mobile app and website come from one team, so they fit together.</p></div>
+        <div class="trait"><div class="ic hex">JWT</div><b>Secure access</b><p>Every platform separates what admins, staff and clients can see and do.</p></div>
+        <div class="trait"><div class="ic hex">$</div><b>On budget</b><p>Proven stacks and reusable building blocks keep costs predictable for small and mid-sized businesses.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="work" id="work">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">Selected work</span>
+        <h2>Products in production for real clients</h2>
+        <p>Each project below is a complete system we designed and built, not a single screen.</p>
+      </div>
+
+      <div class="cases">
+        <article class="case">
+          <figure class="shot">
+            <div class="shot-bar"><span class="dots"><i></i><i></i><i></i></span><span class="shot-label">Celebrity Systems · Admin dashboard</span></div>
+            <img src="images/celebrity-systems.png" alt="Celebrity Systems admin dashboard with a bilingual English and Arabic switch, a sidebar for accounts, companies, screens and tickets, and summary cards for companies, screens, tickets and contracts" width="1886" height="560" loading="lazy">
+          </figure>
+          <div class="case-meta">
+            <span class="sector">LED screens · Field service</span>
+            <h3>Celebrity Systems</h3>
+            <p class="client">Maintenance management platform for an LED display installation company.</p>
+            <p class="sum">A three-part platform that tracks every installed LED screen down to its cabinets and modules, manages maintenance contracts, and dispatches technicians through tickets, with client companies following progress from their own app.</p>
+            <div class="tags"><span class="tag">Spring Boot</span><span class="tag">MySQL</span><span class="tag">React</span><span class="tag">Flutter</span><span class="tag">AWS S3</span><span class="tag">OneSignal</span><span class="tag">i18n AR/EN</span></div>
+          </div>
+          <div class="parts">
+            <div class="part">
+              <h4>Backend API <span class="plat">Java · Spring Boot</span></h4>
+              <p>JWT-secured REST API with role-based permissions for admins, supervisors, technicians and client companies.</p>
+            </div>
+            <div class="part">
+              <h4>Admin web dashboard <span class="plat">React · bilingual</span></h4>
+              <p>Step-by-step screen registration (screen, cabinets, modules, cables, resolution), contracts, sub-contracts, tickets and analytics.</p>
+            </div>
+            <div class="part">
+              <h4>Mobile app <span class="plat">Flutter · iOS / Android</span></h4>
+              <p>Technicians receive tickets and file checklist reports from site. Client companies open tickets, view their screens, contracts and reports.</p>
+            </div>
+            <ul class="feat">
+              <li>Indoor and outdoor screen registry</li>
+              <li>Weekly to twice-a-year service contracts</li>
+              <li>Regular, emergency, preventive and call-back tickets</li>
+              <li>Component change history per screen</li>
+              <li>PDF report generation</li>
+              <li>Contract expiry alerts by email and push</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="case">
+          <figure class="shot">
+            <div class="shot-bar"><span class="dots"><i></i><i></i><i></i></span><span class="shot-label">Morph · Staff support dashboard</span></div>
+            <img src="images/morph-dashboard.png" alt="Morph staff support dashboard showing 2,263 total tickets split into open, in progress, closed, rework and canceled, with a ticket status chart and ticket activity over time" width="1891" height="862" loading="lazy">
+          </figure>
+          <div class="case-meta">
+            <span class="sector">Accounting · UAE</span>
+            <h3>Morph Accounting</h3>
+            <p class="client">Digital presence and client portal for an accounting and tax firm.</p>
+            <p class="sum">A public website that sells Morph's services, a mobile app where clients send receipts and documents, and a staff dashboard where accountants manage every client company and request. More than 2,200 client requests have gone through the system.</p>
+            <a class="visit" href="https://morph-accounting.ae/" target="_blank" rel="noopener">Visit morph-accounting.ae ↗</a>
+            <div class="tags"><span class="tag">React</span><span class="tag">Flutter</span><span class="tag">Firebase</span><span class="tag">Vue 3</span><span class="tag">Spring Boot</span><span class="tag">Tailwind</span></div>
+          </div>
+          <div class="parts">
+            <div class="part">
+              <h4>Company website <span class="plat">React · Tailwind</span></h4>
+              <p>Services (bookkeeping, tax, CFO, financial reporting, audit support), Essentials / Standard / Growth pricing packages, FAQ, WhatsApp button and a protected contact form.</p>
+            </div>
+            <div class="part">
+              <h4>Client mobile app <span class="plat">Flutter · Firebase</span></h4>
+              <p>Clients open requests, upload receipts and files, comment on each document and follow status from open to closed, with re-work flagged clearly.</p>
+            </div>
+            <div class="part">
+              <h4>Staff dashboard <span class="plat">Flutter web · Firebase</span></h4>
+              <p>Manage client companies and users, review tickets, view charts, export to Excel and bulk-download attachments by date range.</p>
+            </div>
+            <div class="part">
+              <h4>Account platform <span class="plat">Vue 3 · Spring Boot</span></h4>
+              <p>Sign-up and login service with email, Google and Facebook sign-in, secured with JWT.</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="case">
+          <figure class="shot">
+            <div class="shot-bar"><span class="dots"><i></i><i></i><i></i></span><span class="shot-label">Royal Fragrance · Windows desktop app</span></div>
+            <img src="images/royal-fragrance.png" alt="Royal Fragrance dashboard with monthly and yearly sales, product and customer counts, a 12-month sales trend chart, compliance and quality alerts, and quick actions" width="1916" height="977" loading="lazy">
+          </figure>
+          <div class="case-meta">
+            <span class="sector">Perfumery · Retail</span>
+            <h3>Royal Fragrance</h3>
+            <p class="client">Formulation and sales management software for a fragrance maker.</p>
+            <p class="sum">An offline Windows application that stores every perfume formula, its raw materials and suppliers, and runs day-to-day sales, payments and customer follow-up from one screen.</p>
+            <div class="tags"><span class="tag">Electron</span><span class="tag">SQLite</span><span class="tag">JavaScript</span><span class="tag">Windows installer</span><span class="tag">AR/EN</span></div>
+          </div>
+          <div class="parts">
+            <div class="part">
+              <h4>Desktop app <span class="plat">Windows · works offline</span></h4>
+              <p>Runs entirely on the shop's computer with a local database, one-click backup and an installer the client can set up alone.</p>
+            </div>
+            <ul class="feat">
+              <li>Product formulas checked to total 100%</li>
+              <li>Raw materials and supplier records</li>
+              <li>Product codes and price lists</li>
+              <li>Sales, partial payments and due dates</li>
+              <li>Payment reminders</li>
+              <li>Customer and document archive</li>
+              <li>MSDS / IFRA compliance alerts</li>
+              <li>12-month sales trend dashboard</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="case">
+          <div class="case-meta">
+            <span class="sector">Engineering · Ras Al Khaimah</span>
+            <h3>Al Khobara Al Arab</h3>
+            <p class="client" lang="ar" dir="rtl">الخبراء العرب للاستشارات الهندسية</p>
+            <p class="sum">A premium bilingual website for an engineering consultancy with more than 36 years in Ras Al Khaimah, presenting its design services and project portfolio to developers and government clients.</p>
+            <a class="visit" href="https://al-khobara-al-arab-website.netlify.app/" target="_blank" rel="noopener">Visit the live website ↗</a>
+            <div class="tags"><span class="tag">React</span><span class="tag">TypeScript</span><span class="tag">Vite</span><span class="tag">GSAP</span><span class="tag">Framer Motion</span><span class="tag">Tailwind</span></div>
+          </div>
+          <div class="parts">
+            <div class="part">
+              <h4>Bilingual marketing site <span class="plat">Arabic / English</span></h4>
+              <p>Video hero, animated counters and scroll reveals, full Arabic and English versions with a language switch.</p>
+            </div>
+            <ul class="feat">
+              <li>Service pages: architecture & engineering design</li>
+              <li>Project portfolio with detail pages</li>
+              <li>Validated contact form</li>
+              <li>SEO metadata on every page</li>
+              <li>Swipeable project galleries</li>
+              <li>Responsive from phone to wide screen</li>
+            </ul>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="band" id="team">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">Our team</span>
+        <h2>The people who build your system</h2>
+        <p>A small senior team led by a solution architect with more than three decades in the field. You talk directly to the engineers writing your code.</p>
+      </div>
+      <div class="team">
+        <div class="member lead">
+          <div class="avatar hex" aria-hidden="true">NS</div>
+          <div><h3>Nader Skouti</h3><p class="role">Solution Architect</p></div>
+          <div class="yrs"><b>30+</b><span>years of experience</span></div>
+        </div>
+        <div class="member">
+          <div class="avatar hex" aria-hidden="true">HA</div>
+          <div><h3>Hasan Mhd Amin</h3><p class="role">Senior Software Engineer</p></div>
+          <div class="yrs"><b>10+</b><span>years of experience</span></div>
+        </div>
+        <div class="member">
+          <div class="avatar hex" aria-hidden="true">MS</div>
+          <div><h3>Mohammed Skouti</h3><p class="role">Senior Software Engineer</p></div>
+          <div class="yrs"><b>7+</b><span>years of experience</span></div>
+        </div>
+        <div class="member">
+          <div class="avatar hex" aria-hidden="true">SA</div>
+          <div><h3>Sami Mohammed Amin</h3><p class="role">Software Engineer</p></div>
+          <div class="yrs"><b>4+</b><span>years of experience</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">Technology</span>
+        <h2>Tools we ship with</h2>
+      </div>
+      <div class="stack">
+        <div class="stack-col"><h3>Web</h3><div class="tags"><span class="tag">React</span><span class="tag">TypeScript</span><span class="tag">Vue 3</span><span class="tag">Vite</span><span class="tag">Tailwind CSS</span><span class="tag">Framer Motion</span><span class="tag">GSAP</span><span class="tag">Recharts / D3</span></div></div>
+        <div class="stack-col"><h3>Mobile</h3><div class="tags"><span class="tag">Flutter</span><span class="tag">Dart</span><span class="tag">Bloc / Cubit</span><span class="tag">Dio / Retrofit</span><span class="tag">OneSignal</span></div></div>
+        <div class="stack-col"><h3>Backend</h3><div class="tags"><span class="tag">Java</span><span class="tag">Spring Boot</span><span class="tag">Spring Security</span><span class="tag">JWT</span><span class="tag">MySQL</span><span class="tag">Firebase</span><span class="tag">AWS S3</span></div></div>
+        <div class="stack-col"><h3>Desktop</h3><div class="tags"><span class="tag">Electron</span><span class="tag">SQLite</span><span class="tag">electron-builder</span></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact-sec" id="contact">
+    <div class="wrap">
+      <div class="contact">
+        <div>
+          <span class="eyebrow">Contact</span>
+          <h2>Have a process that still runs on paper or WhatsApp?</h2>
+          <p>Tell us how your business works today. We will propose the smallest system that fixes it, and a price that fits.</p>
+        </div>
+        <div class="links">
+          <div class="ct"><div><small>Phone</small><b>+40 791 518 316</b></div><button type="button" id="copy-phone" data-copy="+40791518316">Copy</button></div>
+          <div class="ct"><div><small>Email</small><b>Mohammed.skouti.98@gmail.com</b></div><button type="button" id="copy-email" data-copy="Mohammed.skouti.98@gmail.com">Copy</button></div>
+          <a class="pdf-link" href="BOB-Company-Profile.pdf" download>Download company profile <span>PDF ↓</span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>BOB · Bee On Budget</span>
+    <span>Software studio · Web · Mobile · Desktop</span>
+  </div>
+</footer>
+
+<script>
+document.querySelectorAll('.ct button').forEach(function (btn) {
+  btn.addEventListener('click', function () {
+    var text = btn.getAttribute('data-copy');
+    var reset = function () { setTimeout(function () { btn.textContent = 'Copy'; }, 1600); };
+    var select = function () {
+      var el = btn.parentElement.querySelector('b');
+      var r = document.createRange(); r.selectNodeContents(el);
+      var s = window.getSelection(); s.removeAllRanges(); s.addRange(r);
+      btn.textContent = 'Selected'; reset();
+    };
+    try { navigator.clipboard.writeText(text).then(function () { btn.textContent = 'Copied'; reset(); }, select); } catch (e) { select(); }
+  });
+});
+</script>
+
+</body>
+</html>
