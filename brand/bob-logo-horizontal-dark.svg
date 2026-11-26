@@ -1,8 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 116" width="800" height="232">
-  <title>BOB · Bee On Budget</title>
+  <title>BOB · Brains Over Borders</title>
   <style>@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,800&amp;family=JetBrains+Mono:wght@500&amp;display=swap');</style>
   <path d="M50 3 L97 30.2 L97 85.3 L50 112.5 L3 85.3 L3 30.2 Z" fill="#E09B12" stroke="#E09B12" stroke-width="6" stroke-linejoin="round"/>
   <path d="M32 86 V30 H54 L64 44 L54 58 H32 M54 58 H57 L68 72 L57 86 H32" fill="none" stroke="#1D1A14" stroke-width="9" stroke-linejoin="miter" stroke-linecap="square"/>
   <text x="122" y="74" font-family="'Bricolage Grotesque', 'Segoe UI', sans-serif" font-weight="800" font-size="66" letter-spacing="-1" fill="#F2EDE2">BOB</text>
-  <text x="125" y="100" font-family="'JetBrains Mono', Consolas, monospace" font-weight="500" font-size="14" letter-spacing="4.2" fill="#B3A994">BEE ON BUDGET</text>
+  <text x="125" y="100" font-family="'JetBrains Mono', Consolas, monospace" font-weight="500" font-size="14" letter-spacing="2.2" fill="#B3A994">BRAINS OVER BORDERS</text>
 </svg>
