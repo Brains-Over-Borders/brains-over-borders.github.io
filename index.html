@@ -336,6 +336,8 @@ footer .wrap { padding-block: 24px 32px; font-size: 14px; display: flex; flex-wr
   .prod p { font-size: 12px; }
   .prod h3 { font-size: 15.5px; }
   .prod.featured { padding: 20px 170px 20px 20px; }
+  .prod.has-media { grid-template-columns: 62px minmax(0, 1fr); column-gap: 12px; }
+  .prod.has-media > .prod-thumb { height: 86px; border-radius: 8px; }
   .prod.featured > .prod-shot { right: 22px; top: 22px; height: 230px; border-width: 4px; border-radius: 14px; }
   .prod.featured h3 { font-size: 24px; }
   .prod.featured p { font-size: 13px; }
@@ -398,7 +400,7 @@ footer .wrap { padding-block: 24px 32px; font-size: 14px; display: flex; flex-wr
     <div class="cover-bottom">
       <div class="inside">
         <span class="eyebrow">Inside</span>
-        <ol><li>What we build</li><li>How we work</li><li>Celebrity Systems</li><li>Morph Accounting</li><li>Royal Fragrance</li><li>Al Khobara Al Arab</li><li>Mall Automation</li><li>Medical Consultation</li><li>Our products</li><li>Our team</li><li>Technology</li></ol>
+        <ol><li>What we build</li><li>How we work</li><li>Royal Fragrance</li><li>Celebrity Systems</li><li>Morph Accounting</li><li>Al Khobara Al Arab</li><li>Mall Automation</li><li>Medical Consultation</li><li>Our products</li><li>Our team</li><li>Technology</li></ol>
       </div>
       <div class="cover-contact">
         <b>+40 791 518 316</b>
@@ -411,10 +413,10 @@ footer .wrap { padding-block: 24px 32px; font-size: 14px; display: flex; flex-wr
 <div class="clients">
   <div class="wrap">
     <span class="eyebrow">Trusted by</span>
+    <span class="name">Royal Fragrance</span>
     <span class="name">Celebrity Systems</span>
     <span class="name">Morph Accounting</span>
     <span class="name">Al Khobara Al Arab</span>
-    <span class="name">Royal Fragrance</span>
   </div>
 </div>
 
@@ -461,6 +463,36 @@ footer .wrap { padding-block: 24px 32px; font-size: 14px; display: flex; flex-wr
       </div>
 
       <div class="cases">
+        <article class="case">
+          <figure class="shot">
+            <div class="shot-bar"><span class="dots"><i></i><i></i><i></i></span><span class="shot-label">Royal Fragrance · Windows desktop app</span></div>
+            <img src="images/royal-fragrance.png" alt="Royal Fragrance dashboard with monthly and yearly sales, product and customer counts, a 12-month sales trend chart, compliance and quality alerts, and quick actions" width="1916" height="977" loading="lazy">
+          </figure>
+          <div class="case-meta">
+            <span class="sector">Perfumery · Retail</span>
+            <h3>Royal Fragrance</h3>
+            <p class="client">Formulation and sales management software for a fragrance maker.</p>
+            <p class="sum">An offline Windows application that stores every perfume formula, its raw materials and suppliers, and runs day-to-day sales, payments and customer follow-up from one screen.</p>
+            <div class="tags"><span class="tag">Electron</span><span class="tag">SQLite</span><span class="tag">JavaScript</span><span class="tag">Windows installer</span><span class="tag">AR/EN</span></div>
+          </div>
+          <div class="parts">
+            <div class="part">
+              <h4>Desktop app <span class="plat">Windows · works offline</span></h4>
+              <p>Runs entirely on the shop's computer with a local database, one-click backup and an installer the client can set up alone.</p>
+            </div>
+            <ul class="feat">
+              <li>Product formulas checked to total 100%</li>
+              <li>Raw materials and supplier records</li>
+              <li>Product codes and price lists</li>
+              <li>Sales, partial payments and due dates</li>
+              <li>Payment reminders</li>
+              <li>Customer and document archive</li>
+              <li>MSDS / IFRA compliance alerts</li>
+              <li>12-month sales trend dashboard</li>
+            </ul>
+          </div>
+        </article>
+
         <article class="case">
           <figure class="shot">
             <div class="shot-bar"><span class="dots"><i></i><i></i><i></i></span><span class="shot-label">Celebrity Systems · Admin dashboard</span></div>
@@ -532,40 +564,14 @@ footer .wrap { padding-block: 24px 32px; font-size: 14px; display: flex; flex-wr
 
         <article class="case">
           <figure class="shot">
-            <div class="shot-bar"><span class="dots"><i></i><i></i><i></i></span><span class="shot-label">Royal Fragrance · Windows desktop app</span></div>
-            <img src="images/royal-fragrance.png" alt="Royal Fragrance dashboard with monthly and yearly sales, product and customer counts, a 12-month sales trend chart, compliance and quality alerts, and quick actions" width="1916" height="977" loading="lazy">
+            <div class="shot-bar"><span class="dots"><i></i><i></i><i></i></span><span class="shot-label">al-khobara-al-arab-website.netlify.app</span></div>
+            <img src="images/al-khobara.jpg" alt="Al Khobara Al Arab website hero: Engineering confidence for ambitious buildings, over a waterfront villa and marina, with View Projects and Explore Services buttons" width="1853" height="842" loading="lazy">
           </figure>
-          <div class="case-meta">
-            <span class="sector">Perfumery · Retail</span>
-            <h3>Royal Fragrance</h3>
-            <p class="client">Formulation and sales management software for a fragrance maker.</p>
-            <p class="sum">An offline Windows application that stores every perfume formula, its raw materials and suppliers, and runs day-to-day sales, payments and customer follow-up from one screen.</p>
-            <div class="tags"><span class="tag">Electron</span><span class="tag">SQLite</span><span class="tag">JavaScript</span><span class="tag">Windows installer</span><span class="tag">AR/EN</span></div>
-          </div>
-          <div class="parts">
-            <div class="part">
-              <h4>Desktop app <span class="plat">Windows · works offline</span></h4>
-              <p>Runs entirely on the shop's computer with a local database, one-click backup and an installer the client can set up alone.</p>
-            </div>
-            <ul class="feat">
-              <li>Product formulas checked to total 100%</li>
-              <li>Raw materials and supplier records</li>
-              <li>Product codes and price lists</li>
-              <li>Sales, partial payments and due dates</li>
-              <li>Payment reminders</li>
-              <li>Customer and document archive</li>
-              <li>MSDS / IFRA compliance alerts</li>
-              <li>12-month sales trend dashboard</li>
-            </ul>
-          </div>
-        </article>
-
-        <article class="case">
           <div class="case-meta">
             <span class="sector">Engineering · Ras Al Khaimah</span>
             <h3>Al Khobara Al Arab</h3>
             <p class="client" lang="ar" dir="rtl">الخبراء العرب للاستشارات الهندسية</p>
-            <p class="sum">A premium bilingual website for an engineering consultancy with more than 36 years in Ras Al Khaimah, presenting its design services and project portfolio to developers and government clients.</p>
+            <p class="sum">A premium bilingual website for an engineering consultancy with more than 36 years in Ras Al Khaimah, presenting its design, supervision, project management, owner representation and feasibility services, and its project portfolio, to clients across the UAE.</p>
             <a class="visit" href="https://al-khobara-al-arab-website.netlify.app/" target="_blank" rel="noopener">Visit the live website ↗</a>
             <div class="tags"><span class="tag">React</span><span class="tag">TypeScript</span><span class="tag">Vite</span><span class="tag">GSAP</span><span class="tag">Framer Motion</span><span class="tag">Tailwind</span></div>
           </div>
