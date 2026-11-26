@@ -165,8 +165,8 @@ section.band { background: var(--band); }
 
 /* Engineered systems */
 .systems { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
-.sys { background: var(--surface); border: 1px solid var(--line); border-radius: 20px; overflow: hidden; display: grid; grid-template-rows: auto 1fr; }
-.sys-media { height: 340px; display: grid; place-items: center; background: var(--chip); border-bottom: 1px solid var(--line); overflow: hidden; }
+.sys { min-width: 0; background: var(--surface); border: 1px solid var(--line); border-radius: 20px; overflow: hidden; display: grid; grid-template-rows: auto 1fr; }
+.sys-media { height: 340px; display: grid; grid-template-columns: minmax(0, 1fr); place-items: center; background: var(--chip); border-bottom: 1px solid var(--line); overflow: hidden; }
 .sys-media--dark { background: #0b0b0b; }
 .sys-media--dark img { width: 100%; height: 100%; object-fit: cover; object-position: center 30%; }
 .phone { height: 300px; aspect-ratio: 356 / 707; border-radius: 26px; border: 7px solid #1d1a14; overflow: hidden; background: #fff; box-shadow: 0 20px 40px -24px rgba(40, 28, 6, .55); }
@@ -184,6 +184,12 @@ section.band { background: var(--band); }
 .prod h3 [lang="ar"] { font-weight: 600; }
 .prod p { font-size: 14.5px; color: var(--muted); }
 .prod .visit { margin-top: 4px; font-size: 14.5px; }
+.prod-top { display: flex; align-items: center; gap: 10px; }
+.app-icon { width: 40px; height: 40px; border-radius: 10px; object-fit: cover; border: 1px solid var(--line); }
+.prod.has-media { grid-template-columns: 108px minmax(0, 1fr); column-gap: 18px; }
+.prod.has-media > * { grid-column: 2; }
+.prod.has-media > .prod-thumb { grid-column: 1; grid-row: 1 / span 4; align-self: start; height: 150px; border-radius: 12px; overflow: hidden; border: 1px solid var(--line); background: var(--night); }
+.prod-thumb img { display: block; width: 100%; height: 100%; object-fit: cover; }
 .plat-chip { font-family: var(--mono); font-size: 11px; letter-spacing: .08em; text-transform: uppercase; color: var(--propolis); background: var(--honey-soft); padding: 3px 9px; border-radius: 6px; }
 .prod.featured { grid-column: span 2; background: var(--night); border-color: var(--night); color: var(--night-ink); padding: 30px; position: relative; overflow: hidden; }
 .prod.featured::before { content: ""; position: absolute; inset: 0; background-image: var(--comb); background-size: 55.4px 96px; -webkit-mask-image: linear-gradient(240deg, #000, transparent 60%); mask-image: linear-gradient(240deg, #000, transparent 60%); pointer-events: none; }
@@ -195,6 +201,8 @@ section.band { background: var(--band); }
 .prod-points { display: flex; flex-wrap: wrap; gap: 8px; margin: 2px 0 0; padding: 0; list-style: none; }
 .prod-points li { font-size: 13px; color: var(--night-ink); border: 1px solid var(--night-line); border-radius: 999px; padding: 4px 12px; }
 .prod-links { display: flex; flex-wrap: wrap; gap: 10px 24px; }
+.prod.featured { padding-right: 230px; }
+.prod.featured > .prod-shot { position: absolute; right: 32px; top: 30px; height: 330px; aspect-ratio: 308 / 676; border-color: #0d0b08; box-shadow: 0 24px 40px -18px rgba(0, 0, 0, .7); transform: rotate(4deg); }
 
 /* Traits */
 .traits { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; }
@@ -249,15 +257,16 @@ footer .wrap { padding-block: 24px 32px; font-size: 14px; display: flex; flex-wr
   .case, .contact { grid-template-columns: 1fr; }
   .services { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .traits, .stack, .team, .products { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .systems { grid-template-columns: 1fr; }
+  .systems { grid-template-columns: minmax(0, 1fr); }
   .cover-stats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .cover-stats div:nth-child(3) { border-left: 0; padding-left: 0; }
   .case { padding: 24px; }
   .nav-links a:not(.cta) { display: none; }
 }
 @media (max-width: 560px) {
-  .services, .traits, .stack, .feat, .team, .products { grid-template-columns: 1fr; }
-  .prod.featured { grid-column: auto; }
+  .services, .traits, .stack, .feat, .team, .products { grid-template-columns: minmax(0, 1fr); }
+  .prod.featured { grid-column: auto; padding-right: 30px; padding-bottom: 0; }
+  .prod.featured > .prod-shot { position: relative; right: auto; top: auto; height: 260px; margin: 12px auto -40px; transform: none; }
   .sys-media { height: 280px; }
   .phone { height: 250px; }
   section { padding-block: 64px; }
@@ -326,7 +335,8 @@ footer .wrap { padding-block: 24px 32px; font-size: 14px; display: flex; flex-wr
   .prod { padding: 16px; gap: 7px; break-inside: avoid; }
   .prod p { font-size: 12px; }
   .prod h3 { font-size: 15.5px; }
-  .prod.featured { padding: 20px; }
+  .prod.featured { padding: 20px 170px 20px 20px; }
+  .prod.featured > .prod-shot { right: 22px; top: 22px; height: 230px; border-width: 4px; border-radius: 14px; }
   .prod.featured h3 { font-size: 24px; }
   .prod.featured p { font-size: 13px; }
   #products { break-before: page; }
@@ -644,6 +654,7 @@ footer .wrap { padding-block: 24px 32px; font-size: 14px; display: flex; flex-wr
           <p>A free QR code menu maker for restaurants, cafés and bars. Owners build their menu in an admin dashboard, and guests scan a QR code to open it on their phone.</p>
           <ul class="prod-points"><li>Landing page and sign-up</li><li>Live QR menus for guests</li><li>Admin dashboard for owners</li></ul>
           <div class="prod-links"><a class="visit" href="https://menusaic.com/" target="_blank" rel="noopener">menusaic.com ↗</a><a class="visit" href="https://qr.menusaic.com/22" target="_blank" rel="noopener">See a live menu ↗</a></div>
+          <div class="prod-shot phone"><img src="images/menusaic-menu.png" alt="A Menusaic restaurant menu on a phone, with search and photo categories for starters, main dishes, pizza, desserts and drinks" width="308" height="676" loading="lazy"></div>
         </article>
         <article class="prod">
           <div class="prod-top"><span class="plat-chip">Web</span></div>
@@ -651,7 +662,8 @@ footer .wrap { padding-block: 24px 32px; font-size: 14px; display: flex; flex-wr
           <p>A planner for a trip to Italy.</p>
           <a class="visit" href="https://italy.itshasan.de/" target="_blank" rel="noopener">Open ↗</a>
         </article>
-        <article class="prod">
+        <article class="prod has-media">
+          <div class="prod-thumb"><img src="images/currency-converter.png" alt="Syrian currency converter banknote counter with 10 to 500 Syrian pound notes" width="452" height="396" loading="lazy"></div>
           <div class="prod-top"><span class="plat-chip">Web</span></div>
           <h3>Syrian Currency Converter</h3>
           <p>Converts euros and US dollars to the new and old Syrian pound.</p>
@@ -664,24 +676,25 @@ footer .wrap { padding-block: 24px 32px; font-size: 14px; display: flex; flex-wr
           <a class="visit" href="https://pairtro.pages.dev/" target="_blank" rel="noopener">Open ↗</a>
         </article>
         <article class="prod">
-          <div class="prod-top"><span class="plat-chip">Android</span></div>
+          <div class="prod-top"><img class="app-icon" src="images/icon-notespark.png" alt="" width="40" height="40" loading="lazy"><span class="plat-chip">Android</span></div>
           <h3>NoteSpark</h3>
           <p>Write notes, lists and receipts, share them with family and friends, and sync across devices with NoteSpark Cloud.</p>
           <a class="visit" href="https://play.google.com/store/apps/details?id=de.itshasan.notespark" target="_blank" rel="noopener">Google Play ↗</a>
         </article>
         <article class="prod">
-          <div class="prod-top"><span class="plat-chip">Android · Android TV</span></div>
+          <div class="prod-top"><img class="app-icon" src="images/icon-linksharer.png" alt="" width="40" height="40" loading="lazy"><span class="plat-chip">Android · Android TV</span></div>
           <h3>Link Sharer</h3>
           <p>Send a link from your phone straight to your Android TV, for videos and articles on the big screen.</p>
           <a class="visit" href="https://play.google.com/store/apps/details?id=de.itshasan.linksharer" target="_blank" rel="noopener">Google Play ↗</a>
         </article>
         <article class="prod">
-          <div class="prod-top"><span class="plat-chip">Android</span></div>
+          <div class="prod-top"><img class="app-icon" src="images/icon-derdiedas.png" alt="" width="40" height="40" loading="lazy"><span class="plat-chip">Android</span></div>
           <h3>Der Die Das</h3>
           <p>Adds a "Der Die Das" option to the text menu of every app, so German learners can check a noun's article anywhere.</p>
           <a class="visit" href="https://play.google.com/store/apps/details?id=de.itshasan.derdiedas" target="_blank" rel="noopener">Google Play ↗</a>
         </article>
-        <article class="prod">
+        <article class="prod has-media">
+          <div class="prod-thumb"><img src="images/antichristos-app.png" alt="Antichristos app showing the list of novel chapters in Arabic" width="375" height="667" loading="lazy"></div>
           <div class="prod-top"><span class="plat-chip">Android · e-book</span></div>
           <h3><span lang="ar" dir="rtl">انتيخريستوس</span> · Antichristos</h3>
           <p>An Arabic novel published as an Android e-book app.</p>
